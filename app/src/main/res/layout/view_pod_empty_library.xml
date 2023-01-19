@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padcmyanmar.smtz.library.views.viewpods.EmptyLibraryViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvReadyToRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_n"
+        android:layout_above="@id/tvGetStarted"
+        android:layout_centerHorizontal="true"
+        android:text="Ready to read?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Get started with a book from your library"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="@dimen/text_regular" />
+
+    <TextView
+        android:id="@+id/btnGoToLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvGetStarted"
+        android:paddingStart="@dimen/margin_large"
+        android:paddingEnd="@dimen/margin_large"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:background="@drawable/background_create_folder_button"
+        android:text="Go to Library"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/white"/>
+
+</com.padcmyanmar.smtz.library.views.viewpods.EmptyLibraryViewPod>

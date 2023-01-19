@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/drawable/background_book_detail_button.xml" value="0.1385" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/drawable/background_create_folder_button.xml" value="0.1395" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/drawable/background_genre_chip.xml" value="0.127" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/drawable/background_genre_chip_selected.xml" value="0.127" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/drawable/background_line.xml" value="0.127" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/drawable/background_progress_bar.xml" value="0.135" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/drawable/background_shelf.xml" value="0.1385" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_add_to_shelf.xml" value="0.18659420289855072" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_book_details.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_create_shelf.xml" value="0.2" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_more_audiobook.xml" value="0.213768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_more_ebook.xml" value="0.213768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_movie_details.xml" value="0.213768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_search_book.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/activity_shelf_detail.xml" value="0.2" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_audiobook.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_ebook.xml" value="0.26052631578947366" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_more_action.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_more_action_List.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_more_action_home.xml" value="0.19882246376811594" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_more_action_library.xml" value="0.19882246376811594" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_more_action_list_view.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_more_action_shelf.xml" value="0.19882246376811594" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_sorting.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/bottom_sheet_view.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragment_audiobooks.xml" value="0.1838768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragment_ebooks.xml" value="0.1838768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragment_library.xml" value="0.213768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragment_your_books.xml" value="0.22" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragment_your_booksagment.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragment_your_shelves.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/fragments_audiobooks.xml" value="0.1838768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_add_to_shelf.xml" value="0.19882246376811594" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_audiobook.xml" value="0.18840579710144928" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_carousel.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_ebook.xml" value="0.18659420289855072" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_ebook_list.xml" value="0.16" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_genre_chips.xml" value="0.536" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_large_grid.xml" value="0.18840579710144928" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_large_grid_view.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_list_view.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_more_audiobooks.xml" value="0.1838768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_more_books.xml" value="0.1838768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_more_ebooks.xml" value="0.2" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_search_book.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_shelf.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_holder_small_grid_view.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_item_more_books.xml" value="0.10746720484359233" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_pod_choices.xml" value="0.20108695652173914" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_pod_empty_library.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_pod_empty_shelf.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_pod_more_audiobooks.xml" value="0.1838768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_pod_more_books.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_pod_more_ebooks.xml" value="0.1838768115942029" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/layout/view_pod_sorting_and_display.xml" value="0.19972826086956522" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.221875" />
+        <entry key="..\:/Android/AndroidStudioProjects/Library/app/src/main/res/menu/bottom_navigation_view.xml" value="0.221875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

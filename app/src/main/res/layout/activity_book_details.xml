@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:src="@drawable/ic_baseline_back_26dp_secondary" />
+
+        <com.padcmyanmar.smtz.library.views.components.RoundedCornerImageView
+            android:id="@+id/ivBookImage"
+            android:layout_width="110dp"
+            android:layout_height="180dp"
+            android:layout_below="@id/btnBack"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:scaleType="fitXY"
+            android:src="@mipmap/book"
+            app:cornerRadius="@dimen/margin_medium" />
+
+
+        <TextView
+            android:id="@+id/tvBookNameBookDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBack"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_toEndOf="@id/ivBookImage"
+            android:text="Lean UX: Designing Great Products with Agile Teams"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBookAuthorNameBookDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBookNameBookDetail"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_toEndOf="@id/ivBookImage"
+            android:text="Josh Waitzkin"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <TextView
+            android:id="@+id/tvBookType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBookAuthorNameBookDetail"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_toEndOf="@id/ivBookImage"
+            android:text="Ebook - 187 pages"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <ImageView
+            android:id="@+id/ivSeparateLine1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_medium_2"
+            android:layout_below="@id/ivBookImage"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:src="@drawable/background_line" />
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivSeparateLine1"
+            android:layout_margin="@dimen/margin_medium_3"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/margin_card_medium_2"
+                android:layout_weight="4"
+                android:background="@drawable/background_book_detail_button"
+                android:gravity="center"
+                android:text="@string/lbl_free_sample"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_regular" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="6"
+                android:background="@drawable/background_book_detail_button"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/lbl_add_to_wishlist"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llButtons"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:src="@drawable/ic_baseline_error_outline_24dp_secondary" />
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llButtons"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:layout_toEndOf="@id/ivNote"
+            android:text="Books that you buy on the Google Play website can be read in this app"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular" />
+
+        <ImageView
+            android:id="@+id/ivSeparateLine2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_medium_2"
+            android:layout_below="@id/tvNote"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:src="@drawable/background_line" />
+
+        <TextView
+            android:id="@+id/tvAboutThisEbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivSeparateLine2"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:text="About this ebook"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvAboutThisEbook"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:src="@drawable/ic_baseline_navigate_next_26dp_accent" />
+
+        <TextView
+            android:id="@+id/tvBookSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAboutThisEbook"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:text="The New York Times-bestselling author's Whitebread price winning bebut-Winterson has mastered both comedyand traged in this rich little novel(The Washington Post Book World)."
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tvRatingAndReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBookSummary"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="Rating and reviews"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvRatingAndReviews"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:src="@drawable/ic_baseline_navigate_next_26dp_accent" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRatingAndReviews"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="3.9"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big_2x"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/rbRating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRating"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:theme="@style/RatingBar"
+            android:numStars="5"
+            tools:rating="4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rbRating"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:text="95 ratings"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:id="@+id/tvFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_below="@id/tvRatingAndReviews"
+            android:layout_toEndOf="@id/tvRating"
+            android:text="5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/tvFive"
+            android:layout_toEndOf="@id/tvRating"
+            android:text="4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/tvFour"
+            android:layout_toEndOf="@id/tvRating"
+            android:text="3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/tvThree"
+            android:layout_toEndOf="@id/tvRating"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/tvTwo"
+            android:layout_toEndOf="@id/tvRating"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"/>
+
+        <ProgressBar
+            android:id="@+id/progressFive"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_card_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_below="@id/tvRatingAndReviews"
+            android:layout_toEndOf="@id/tvFive"
+            android:progress="40"
+            android:progressDrawable="@drawable/background_progress_bar"/>
+
+        <ProgressBar
+            android:id="@+id/progressFour"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_card_medium_2"
+            android:layout_below="@id/progressFive"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/tvFive"
+            android:progress="50"
+            android:progressDrawable="@drawable/background_progress_bar" />
+
+        <ProgressBar
+            android:id="@+id/progressThree"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_card_medium_2"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_below="@id/progressFour"
+            android:layout_toEndOf="@id/tvFive"
+            android:progress="30"
+            android:progressDrawable="@drawable/background_progress_bar"/>
+
+        <ProgressBar
+            android:id="@+id/progressTwo"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_card_medium_2"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_below="@id/progressThree"
+            android:layout_toEndOf="@id/tvFive"
+            android:progress="10"
+            android:progressDrawable="@drawable/background_progress_bar"/>
+
+        <ProgressBar
+            android:id="@+id/progressOne"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_card_medium_2"
+            android:layout_below="@id/progressTwo"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/tvFive"
+            android:progress="5"
+            android:progressDrawable="@drawable/background_progress_bar" />
+
+
+        <com.padcmyanmar.smtz.library.views.components.RoundedCornerImageView
+            android:id="@+id/ivReviewProfileOne"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/tvOne"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:scaleType="centerCrop"
+            app:cornerRadius="19dp"
+            app:srcCompat="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tvReviewerNameOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_below="@id/tvOne"
+            android:layout_toEndOf="@id/ivReviewProfileOne"
+            android:textSize="@dimen/text_regular_2x"
+            android:text="Steven Gomez"
+            android:textColor="@color/black"/>
+
+        <RatingBar
+            android:id="@+id/rbReviewerOne"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvReviewerNameOne"
+            android:layout_toEndOf="@id/ivReviewProfileOne"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:theme="@style/RatingBar"
+            android:numStars="5"
+            tools:rating="5" />
+
+        <TextView
+            android:id="@+id/tvReviewOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rbReviewerOne"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/ivReviewProfileOne"
+            android:text="Had to buy book for class, really convenient, excellent book"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular" />
+
+        <com.padcmyanmar.smtz.library.views.components.RoundedCornerImageView
+            android:id="@+id/ivReviewProfileTwo"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/tvReviewOne"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_large"
+            android:scaleType="centerCrop"
+            app:cornerRadius="19dp"
+            app:srcCompat="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tvReviewerNameTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_below="@id/tvReviewOne"
+            android:layout_toEndOf="@id/ivReviewProfileTwo"
+            android:textSize="@dimen/text_regular_2x"
+            android:text="Steven Gomez"
+            android:textColor="@color/black"/>
+
+        <RatingBar
+            android:id="@+id/rbReviewerTwo"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvReviewerNameTwo"
+            android:layout_toEndOf="@id/ivReviewProfileTwo"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:theme="@style/RatingBar"
+            android:numStars="5"
+            tools:rating="4" />
+
+        <TextView
+            android:id="@+id/tvReviewTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_below="@id/rbReviewerTwo"
+            android:layout_toEndOf="@id/ivReviewProfileTwo"
+            android:textSize="@dimen/text_regular"
+            android:text="This is a semi-autographical novel about a girl coming out of age as the adopted daughter if a Pentecostal Family in England"
+            android:textColor="@color/colorSecondaryText"/>
+
+        <TextView
+            android:id="@+id/tvPublished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvReviewTwo"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="Published"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPublishDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPublished"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            android:text="December 1,2007 . Open Road + Grove/Atlantic"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

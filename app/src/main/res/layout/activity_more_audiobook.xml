@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MoreAudiobookActivity">
+
+    <!--  Same as view_pod_more_audiobooks  -->
+    <RelativeLayout
+        android:id="@+id/btnMoreAudiobooksSecondScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:src="@drawable/ic_baseline_arrow_back_26dp_secondary" />
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:text="Audiobooks for you"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMoreAudiobooksSecondScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMoreAudiobooksSecondScreen"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_small"
+        android:clipToPadding="false"
+        android:paddingEnd="@dimen/margin_medium_2" />
+
+</RelativeLayout>

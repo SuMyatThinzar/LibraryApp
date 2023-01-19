@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?attr/bottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/tvShelfNameBottomSheetLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="Lean UX: Designing Great Products with Agile Teams"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_2x" />
+
+
+    <ImageView
+        android:id="@+id/ivSeparateLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_medium_2"
+        android:layout_below="@id/tvShelfNameBottomSheetLibrary"
+        android:src="@drawable/background_line" />
+
+    <LinearLayout
+        android:id="@+id/llRenameShelf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivSeparateLine"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/ic_baseline_pen_24dp_secondary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/lbl_rename_shelf"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDeleteShelf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llRenameShelf"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_medium_3"
+            android:layout_weight="2"
+            android:src="@drawable/ic_trash" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:paddingTop="@dimen/margin_small"
+            android:text="@string/lbl_delete_shelf"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

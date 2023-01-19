@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_medium"
+    tools:context=".views.fragments.YourShelvesFragment">
+
+    <include
+        android:id="@+id/vpEmpty"
+        layout="@layout/view_pod_empty_shelf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShelfList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/btnCreateNew"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_create_folder_button"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivPencil"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_card_medium_n"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_pencil" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/ivPencil"
+            android:layout_centerVertical="true"
+            android:text="Create new"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    tools:context=".activities.MainScreenActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--  Search Bar  -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSearch"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2">
+
+            <RelativeLayout
+                android:id="@+id/rlSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_medium_2"
+                    android:src="@drawable/ic_baseline_search_24dp_secondary_color" />
+
+                <TextView
+                    android:id="@+id/tvSearchPlayBooksLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@id/btnSearch"
+                    android:text="Search Play Books"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <com.padcmyanmar.smtz.library.views.components.RoundedCornerImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:scaleType="centerCrop"
+                    app:cornerRadius="19dp"
+                    app:srcCompat="@drawable/profile" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/fl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_nav"
+            android:layout_below="@id/cardViewSearch">
+
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:itemIconTint="@color/bottom_navigation_custom_color"
+            app:itemTextColor="@color/bottom_navigation_custom_color"
+            app:menu="@menu/bottom_navigation_menu" />
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

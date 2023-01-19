@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_small">
+
+    <!--  Same as activity_more_ebooks  -->
+    <RelativeLayout
+        android:id="@+id/btnMoreEbooks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="More Like Don't Make Me Think"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvMore"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:src="@drawable/ic_baseline_navigate_next_26dp_accent" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMoreEbooks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMoreEbooks"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:paddingStart="@dimen/margin_small"
+        android:clipToPadding="false"
+        android:paddingEnd="@dimen/margin_medium_2" />
+
+</RelativeLayout>

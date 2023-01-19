@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ShelfDetailActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:src="@drawable/ic_baseline_back_26dp_secondary" />
+
+    <ImageView
+        android:id="@+id/btnMoreActionShelfDetail"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:src="@drawable/ic_more_secondary" />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/textInputShelfReName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/btnBack"-->
+<!--        android:layout_marginStart="@dimen/margin_medium_3"-->
+<!--        android:layout_marginTop="@dimen/margin_medium_3"-->
+<!--        android:layout_marginEnd="@dimen/margin_medium_3"-->
+<!--        android:layout_marginBottom="@dimen/margin_medium_3" />-->
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etShelfReName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBack"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        android:textStyle="bold"
+        android:text="10 Interactions"
+        android:inputType="text"
+        android:singleLine="true"
+        android:imeOptions="actionDone" />
+
+    <TextView
+        android:id="@+id/tvShelfNameShelfDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBack"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        tools:text="10 Interaction Design"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvBookCountShelfDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShelfNameShelfDetail"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="3 books" />
+
+    <ImageView
+        android:id="@+id/ivSeparateLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvBookCountShelfDetail"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:src="@drawable/background_line" />
+
+
+    <include
+        android:id="@+id/vpSortingAndDisplayShelfDetail"
+        layout="@layout/view_pod_sorting_and_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivSeparateLine"/>
+
+</RelativeLayout>

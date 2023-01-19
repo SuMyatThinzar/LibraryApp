@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SearchBookActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_large"
+            android:src="@drawable/ic_baseline_back_26dp_secondary" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginTop="-11dp"
+            android:paddingBottom="@dimen/margin_medium"
+            android:layout_toEndOf="@id/btnBack"
+            android:textColorHint="@color/colorSecondaryText"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:boxBackgroundMode="none">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search Play Books"
+                android:textColor="@color/colorSecondaryText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivSeparateLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/textInputSearch"
+            android:src="@drawable/background_line" />
+
+
+        <TextView
+            android:id="@+id/tvResultFromGooglePlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_below="@id/ivSeparateLine"
+            android:textSize="@dimen/text_regular_2x"
+            android:text="Results from Google Play"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchBookList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvResultFromGooglePlay"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:paddingTop="@dimen/margin_medium_3" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateShelfActivity">
+
+    <ImageView
+        android:id="@+id/btnDone"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:src="@drawable/ic_baseline_back_26dp_secondary" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etShelfName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDone"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        android:hint="@string/lbl_shelf_name"
+        android:inputType="text"
+        android:singleLine="true"
+        android:imeOptions="actionDone" />
+
+    <ImageView
+        android:id="@+id/ivSeparateLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/etShelfName"
+        android:src="@drawable/background_line" />
+
+    <RelativeLayout
+        android:id="@+id/btnConfirmCreateShelf"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:background="@drawable/background_create_folder_button"
+        android:padding="@dimen/margin_card_medium">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_medium_2"
+            android:paddingEnd="@dimen/margin_medium_2"
+            android:layout_centerVertical="true"
+            android:text="@string/lbl_confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

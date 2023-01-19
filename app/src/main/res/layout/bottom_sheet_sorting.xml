@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?attr/bottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/tvSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="Sort by"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <ImageView
+        android:id="@+id/ivSeparateLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_below="@id/tvSortBy"
+        android:src="@drawable/background_line" />
+
+    <RadioButton
+        android:id="@+id/radioButtonRecentlyOpened"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivSeparateLine"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:text="Recently opened" />
+
+    <RadioButton
+        android:id="@+id/radioButtonTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioButtonRecentlyOpened"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:text="Title" />
+
+    <RadioButton
+        android:id="@+id/radioButtonAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioButtonTitle"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:text="Author" />
+
+</RelativeLayout>

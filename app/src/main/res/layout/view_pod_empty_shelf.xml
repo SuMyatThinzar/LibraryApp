@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padcmyanmar.smtz.library.views.viewpods.EmptyShelfViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivEmptyImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_above="@id/tvNoShelves"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/empty_shelf" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoShelves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lbl_no_shelves"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_heading_1x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmptyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNoShelves"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Creates shelves to match the way you think."
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/text_regular_2x" />
+
+    </RelativeLayout>
+
+</com.padcmyanmar.smtz.library.views.viewpods.EmptyShelfViewPod>

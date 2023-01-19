@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <!--  Carousel View  -->
+            <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                android:id="@+id/carouselRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                tools:listitem="@layout/view_holder_carousel"/>
+
+            <!-- Empty View Pod  -->
+            <include
+                android:id="@+id/vpEmptyCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="@dimen/margin_medium_2_n"
+                layout="@layout/view_pod_empty_library"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tlHomeScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorHeight="@dimen/margin_small"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/colorAccent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerHomeBottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

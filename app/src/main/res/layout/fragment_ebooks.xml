@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    <include-->
+<!--        android:id="@+id/vpEbooks1"-->
+<!--        layout="@layout/view_pod_more_ebooks"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpEbooks2"-->
+<!--        layout="@layout/view_pod_more_ebooks"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpEbooks3"-->
+<!--        layout="@layout/view_pod_more_ebooks"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/vpEbooks4"-->
+<!--        layout="@layout/view_pod_more_ebooks"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBookLists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

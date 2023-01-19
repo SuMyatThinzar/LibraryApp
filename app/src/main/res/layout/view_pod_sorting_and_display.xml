@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padcmyanmar.smtz.library.views.viewpods.SortingAndDisplayViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGenreChips"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_toEndOf="@id/btnUnselectAll"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <ImageView
+        android:id="@+id/btnUnselectAll"
+        android:layout_width="@dimen/margin_xlarge"
+        android:layout_height="@dimen/margin_xlarge"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/background_genre_chip"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:src="@drawable/ic_baseline_close_secondary_24dp" />
+
+    <RelativeLayout
+        android:id="@+id/btnSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvGenreChips"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2">
+
+        <ImageView
+            android:id="@+id/ivSort"
+            android:layout_width="@dimen/margin_medium_3"
+            android:layout_height="@dimen/margin_medium_3"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:id="@+id/tvSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_toEndOf="@id/ivSort"
+            android:text="Sort by: Recent" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btnView"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_below="@id/rvGenreChips"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:src="@drawable/ic_list" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLibraryBooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnView"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_medium_2" />
+
+
+
+</com.padcmyanmar.smtz.library.views.viewpods.SortingAndDisplayViewPod>
