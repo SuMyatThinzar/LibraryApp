@@ -1,5 +1,6 @@
 package com.padcmyanmar.smtz.library.data.models
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import com.padcmyanmar.smtz.library.R
 import com.padcmyanmar.smtz.library.data.vos.BookListVO
@@ -13,6 +14,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 
 object LibraryModelImpl : LibraryModel, BaseModel() {
 
+    @SuppressLint("CheckResult")
     override fun getBookList(onFailure: (String) -> Unit): LiveData<List<BookListVO>?>? {
         mLibraryApi.getBookList()
             .subscribeOn(Schedulers.io())
@@ -32,6 +34,7 @@ object LibraryModelImpl : LibraryModel, BaseModel() {
         return mLibraryDatabase?.bookListDao()?.getAllBookList()
     }
 
+    @SuppressLint("CheckResult")
     override fun getMoreBookList(
         listName: String,
         onSuccess: (List<BookVO>) -> Unit,

@@ -32,7 +32,6 @@ class EbookPresenterImpl : ViewModel(), EbookPresenter {
         }
     }
 
-
     // More Books Screen
     override fun onTapMoreBooks(type: Int, listName: String) {
         mView?.onTapMoreBooks(type, listName)
