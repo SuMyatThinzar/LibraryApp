@@ -16,6 +16,7 @@ import com.padcmyanmar.smtz.library.activities.BookDetailsActivity
 import com.padcmyanmar.smtz.library.adapters.CarouselAdapter
 import com.padcmyanmar.smtz.library.adapters.HomeViewPagerAdapter
 import com.padcmyanmar.smtz.library.data.vos.BookVO
+import com.padcmyanmar.smtz.library.delegate.EmptyLibraryDelegate
 import com.padcmyanmar.smtz.library.mvp.presenters.HomePresenter
 import com.padcmyanmar.smtz.library.mvp.presenters.HomePresenterImpl
 import com.padcmyanmar.smtz.library.mvp.views.HomeView
@@ -25,7 +26,7 @@ import kotlinx.android.synthetic.main.bottom_sheet_more_action_library.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_your_shelves.*
 
-class HomeFragment : Fragment(), HomeView {
+class HomeFragment(val delegate: EmptyLibraryDelegate) : Fragment(), HomeView {
 
     private lateinit var mCarouselAdapter: CarouselAdapter
     private lateinit var homeViewPagerAdapter: HomeViewPagerAdapter
@@ -60,12 +61,14 @@ class HomeFragment : Fragment(), HomeView {
 
 
     private fun setUpAdapters() {
-        // setUp Empty Viewpod
+        // setUp Empty ViewPod
         mEmptyViewPod = vpEmptyCarousel as EmptyLibraryViewPod
+        mEmptyViewPod.setUpDelegate(delegate)
 
         // setUp Ebook and Audiobook Fragments
         homeViewPagerAdapter = HomeViewPagerAdapter(this)
         viewPagerHomeBottomNav.adapter = homeViewPagerAdapter
+        viewPagerHomeBottomNav.isUserInputEnabled = false       // Disable swiping between Fragments (for nested horizontal scroll)
 
         mCarouselAdapter = CarouselAdapter(mDetailDelegate = mPresenter)
         carouselRecyclerview.adapter = mCarouselAdapter
@@ -158,4 +161,5 @@ class HomeFragment : Fragment(), HomeView {
     override fun showError(errorString: String) {
         Toast.makeText(requireContext(), errorString, Toast.LENGTH_SHORT).show()
     }
+
 }

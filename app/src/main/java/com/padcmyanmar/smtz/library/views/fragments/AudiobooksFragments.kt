@@ -12,11 +12,6 @@ import com.padcmyanmar.smtz.library.delegate.BookDetailsDelegate
 
 class AudiobooksFragments : Fragment(), BookDetailsDelegate {
 
-//    private lateinit var mMoreAudiobooksViewPod1: MoreAudiobooksViewPod
-//    private lateinit var mMoreAudiobooksViewPod2: MoreAudiobooksViewPod
-//    private lateinit var mMoreAudiobooksViewPod3: MoreAudiobooksViewPod
-//    private lateinit var mMoreAudiobooksViewPod4: MoreAudiobooksViewPod
-
     private lateinit var mBookListAdapter: BookListAdapter
 
     override fun onCreateView(

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.padcmyanmar.smtz.library.R
+import com.padcmyanmar.smtz.library.delegate.EmptyLibraryDelegate
 import com.padcmyanmar.smtz.library.mvp.presenters.MainPresenter
 import com.padcmyanmar.smtz.library.mvp.presenters.MainPresenterImpl
 import com.padcmyanmar.smtz.library.mvp.views.MainView
@@ -15,7 +16,7 @@ import com.padcmyanmar.smtz.library.views.fragments.HomeFragment
 import com.padcmyanmar.smtz.library.views.fragments.LibraryFragment
 import kotlinx.android.synthetic.main.activity_home_screen.*
 
-class MainScreenActivity : AppCompatActivity(), MainView {
+class MainScreenActivity : AppCompatActivity(), MainView, EmptyLibraryDelegate {
 
     private lateinit var mPresenter: MainPresenter
 
@@ -25,7 +26,7 @@ class MainScreenActivity : AppCompatActivity(), MainView {
 
         setUpPresenter()
 
-        switchFragment(HomeFragment())
+        switchFragment(HomeFragment(this))
         setUpListeners()
 
         mPresenter.onUiReady(this)
@@ -41,7 +42,7 @@ class MainScreenActivity : AppCompatActivity(), MainView {
         // Bottom Navigation
         bottom_nav.setOnItemSelectedListener { menuItem: MenuItem ->
             when (menuItem.itemId) {
-                R.id.action_home -> switchFragment(HomeFragment())
+                R.id.action_home -> switchFragment(HomeFragment(this))
                 R.id.action_library -> switchFragment(LibraryFragment())
             }
             true
@@ -54,8 +55,13 @@ class MainScreenActivity : AppCompatActivity(), MainView {
 
     private fun switchFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .add(R.id.fl_container, fragment)
+            .replace(R.id.fl_container, fragment)
             .commit()
+    }
+
+    override fun onTapGoToLibrary() {
+        bottom_nav.selectedItemId = R.id.action_library
+        switchFragment(LibraryFragment())
     }
 
     override fun showError(errorString: String) {
