@@ -6,6 +6,10 @@
     <dimen name="margin_medium_2">16dp</dimen>
     <dimen name="margin_card_medium_2">12dp</dimen>
     <dimen name="margin_medium_3">20dp</dimen>
+    <dimen name="margin_card_medium_3">18dp</dimen>
+    <dimen name="margin_medium_4">26dp</dimen>
+    <dimen name="margin_medium_5">38dp</dimen>
+    <dimen name="margin_medium_6">40dp</dimen>
     <dimen name="margin_large">24dp</dimen>
     <dimen name="margin_xlarge">32dp</dimen>
     <dimen name="margin_xxlarge">48dp</dimen>
@@ -15,7 +19,8 @@
     <dimen name="margin_medium_n">-8dp</dimen>
     <dimen name="margin_card_medium_2_n">-12dp</dimen>
     <dimen name="margin_medium_2_n">-16dp</dimen>
-    <dimen name="margin_medium_3_n">-18dp</dimen>
+    <dimen name="margin_card_medium_3_n">-18dp</dimen>
+    <dimen name="margin_medium_3_n">-20dp</dimen>
     <dimen name="margin_large_n">-24dp</dimen>
     <dimen name="margin_xlarge_n">-32dp</dimen>
 

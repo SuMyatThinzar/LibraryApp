@@ -12,10 +12,24 @@ class AddToShelfViewHolder(itemView: View, delegate: AddToShelfCheckBoxDelegate)
     private var mShelf: ShelfVO? = null
 
     init {
-        itemView.cbShelf.setOnClickListener {
+//        itemView.cbShelf.setOnClickListener {
+//            if (mShelf?.isChecked == true) {
+//                mShelf?.isChecked = false
+//                delegate.onTapCheckBoxRemoveShelf(mShelf!!)
+//            } else {
+//                mShelf?.isChecked = true
+//                delegate.onTapCheckBoxAddShelf(mShelf!!)
+//            }
+//        }
 
-            mShelf?.let { delegate.onTapCheckBox(it.shelfId) }
+        itemView.cbShelf.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                delegate.onTapCheckBoxAddShelf(mShelf!!)
+            } else {
+                delegate.onTapCheckBoxRemoveShelf(mShelf!!)
+            }
         }
+
     }
 
     fun bindData(shelf: ShelfVO) {

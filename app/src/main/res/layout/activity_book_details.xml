@@ -14,10 +14,12 @@
             android:id="@+id/btnBack"
             android:layout_width="@dimen/margin_large"
             android:layout_height="@dimen/margin_large"
+            android:padding="@dimen/margin_small"
             android:layout_marginStart="@dimen/margin_medium_3"
             android:layout_marginTop="@dimen/margin_medium_3"
             android:layout_marginBottom="@dimen/margin_medium_3"
-            android:src="@drawable/ic_baseline_back_26dp_secondary" />
+            android:src="@drawable/ic_baseline_back_26dp_secondary"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
 
         <com.padcmyanmar.smtz.library.views.components.RoundedCornerImageView
             android:id="@+id/ivBookImage"
@@ -25,7 +27,6 @@
             android:layout_height="180dp"
             android:layout_below="@id/btnBack"
             android:layout_marginStart="@dimen/margin_medium_3"
-            android:layout_marginTop="@dimen/margin_medium_2"
             android:scaleType="fitXY"
             android:src="@mipmap/book"
             app:cornerRadius="@dimen/margin_medium" />
@@ -211,16 +212,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvRating"
-            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_card_medium_3"
             android:theme="@style/RatingBar"
             android:numStars="5"
-            tools:rating="4" />
+            android:rating="4" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/rbRating"
-            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_alignEnd="@id/tvRating"
+            android:layout_alignStart="@id/tvRating"
+            android:gravity="center_horizontal"
             android:text="95 ratings"
             android:textColor="@color/colorSecondaryText"
             android:textSize="@dimen/text_small"/>

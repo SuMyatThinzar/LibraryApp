@@ -9,10 +9,11 @@
 
         <ImageView
             android:id="@+id/ivEmptyImage"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="@dimen/margin_medium_3_n"
+            android:padding="@dimen/margin_medium_3"
             android:layout_above="@id/tvNoShelves"
-            android:layout_centerHorizontal="true"
             android:src="@drawable/empty_shelf" />
 
         <androidx.appcompat.widget.AppCompatTextView

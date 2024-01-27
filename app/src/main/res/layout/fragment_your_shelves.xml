@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_medium_2"
     tools:context=".views.fragments.YourShelvesFragment">
 
     <include
@@ -15,7 +15,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvShelfList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin_large"
+        android:clipToPadding="false"
+        android:layout_above="@id/btnCreateNew"/>
 
     <RelativeLayout
         android:id="@+id/btnCreateNew"

@@ -21,18 +21,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ivEbook"
         android:padding="@dimen/margin_small"
+        android:maxLines="2"
         android:text="Lean UX: Designing Great Products with Agile Teams"
         android:textColor="@color/colorSecondaryText" />
 
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/btnMoreActionEbooks"
-        android:layout_width="@dimen/margin_xlarge"
-        android:layout_height="@dimen/margin_large"
+        android:layout_width="@dimen/margin_medium_5"
+        android:layout_height="@dimen/margin_medium_4"
         android:layout_alignParentEnd="true"
+        android:padding="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_medium"
+        android:background="?attr/selectableItemBackground"
         android:src="@drawable/ic_more" />
-
 
 </RelativeLayout>

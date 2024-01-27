@@ -16,8 +16,11 @@
             android:id="@+id/cardViewSearch"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="@dimen/margin_small"
             android:layout_marginStart="@dimen/margin_medium_2"
-            android:layout_marginEnd="@dimen/margin_medium_2">
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            app:cardElevation="@dimen/margin_card_medium"
+            app:cardCornerRadius="@dimen/margin_card_medium">
 
             <RelativeLayout
                 android:id="@+id/rlSearch"
@@ -61,10 +64,18 @@
             android:id="@+id/fl_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/bottom_nav"
+            android:layout_above="@id/shadow_view"
             android:layout_below="@id/cardViewSearch">
 
         </FrameLayout>
+
+        <View
+            android:id="@+id/shadow_view"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:layout_above="@id/bottom_nav"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/bottom_navigation_shadow" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
@@ -72,11 +83,11 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentBottom="true"
             android:background="@color/white"
+            android:elevation="@dimen/margin_large"
             app:itemIconTint="@color/bottom_navigation_custom_color"
             app:itemTextColor="@color/bottom_navigation_custom_color"
             app:menu="@menu/bottom_navigation_menu" />
 
     </RelativeLayout>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

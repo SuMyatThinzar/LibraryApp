@@ -28,7 +28,7 @@ class AddToShelfPresenterImpl : ViewModel(), AddToShelfPresenter {
 
     override fun onUiReadyAddToShelf(owner: LifecycleOwner, book: BookVO, bookListName: String) {
         mBook = book
-        mBook?.let{ it.bookListName = bookListName }
+        mBook?.let { it.bookListName = bookListName }
         lifecycleOwner = owner
 
         mLibraryModel.getAllShelves()?.observe(owner) { shelves ->
@@ -42,43 +42,29 @@ class AddToShelfPresenterImpl : ViewModel(), AddToShelfPresenter {
 
         selectedShelves.forEach { selectedShelf ->
 
-            if (selectedShelf.isChecked) {
+            mBook?.let { mBook ->
+                mShelves.forEach { shelf ->
 
-                mBook?.let { mBook ->
-                    mShelves.forEach { shelf ->
+                    if (shelf.shelfId == selectedShelf.shelfId) {
+                        val books = shelf.books
+                        books.add(mBook)
 
-                        if (shelf.shelfId == selectedShelf.shelfId) {
-
-                            val books = shelf.books
-                            books.add(mBook)
-
-                            val shelf = shelf.copy(books = books)
-                            mLibraryModel.insertShelf(shelf)
-//                            Log.d("Ok", shelf.books.toString())
-                        }
+                        val newShelf = shelf.copy(books = books)
+                        mLibraryModel.insertShelf(newShelf)
                     }
                 }
             }
+
             mView?.navigateToYourShelvesScreen()
         }
     }
 
-    override fun onTapCheckBox(shelfId: Long) {
-        mShelves.forEach { shelf ->
+    override fun onTapCheckBoxAddShelf(shelfVO: ShelfVO) {
+        selectedShelves.add(shelfVO)
+    }
 
-            selectedShelves.add(shelf.copy(shelf.shelfId, shelf.shelfName, shelf.books))
-
-            selectedShelves.forEach { selectedShelf ->
-
-                if (selectedShelf.shelfId == shelfId) {
-                    if (selectedShelf.isChecked == false) {
-                        selectedShelf.isChecked = true
-                    } else {
-                        selectedShelf.isChecked = false
-                    }
-                }
-            }
-        }
+    override fun onTapCheckBoxRemoveShelf(shelfVO: ShelfVO) {
+        selectedShelves.remove(shelfVO)
     }
 
     override fun onUiReady(owner: LifecycleOwner) {

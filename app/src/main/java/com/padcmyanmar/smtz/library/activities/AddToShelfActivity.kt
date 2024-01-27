@@ -44,9 +44,7 @@ class AddToShelfActivity : AppCompatActivity() , AddToShelfView {
         setContentView(R.layout.activity_add_to_shelf)
 
         setUpPresenter()
-
         setUpAdapter()
-
         setUpListener()
 
         mBook = intent.getParcelableExtra(EXTRA_BOOK)
@@ -76,7 +74,7 @@ class AddToShelfActivity : AppCompatActivity() , AddToShelfView {
             mPresenter.onTapAddToShelfConfirm()
         }
         btnClose.setOnClickListener {
-            super.onBackPressed()
+            finish()
         }
     }
 
@@ -85,7 +83,7 @@ class AddToShelfActivity : AppCompatActivity() , AddToShelfView {
     }
 
     override fun navigateToYourShelvesScreen() {
-        super.onBackPressed()
+        finish()
     }
 
     override fun showError(errorString: String) {
